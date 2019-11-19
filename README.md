@@ -24,6 +24,8 @@
 在工程根目录下添加 .env 并至少填入以下配置参数，其中数据库的相关参数需调整
 
 ```
+FRONTEND_DOMAIN=39.99.137.212
+
 REDIS_HOST=39.98.136.173
 REDIS_PASSWORD=hehebugaosuni
 
@@ -38,7 +40,7 @@ FLASK_ENV=development
 
 在 `docker-compose.yml` 的第 24 行处可以修改后端监听的端口号
 
-在根目录下执行 `docker-compose -f docker-compose.yml -d up` 启动工程
+在根目录下执行 `docker-compose -f docker-compose.yml up -d` 启动工程
 
 ### 数据库
 
