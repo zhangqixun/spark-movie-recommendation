@@ -15,19 +15,7 @@
 
 ## 整体框架
 
-```mermaid
-graph LR
-	Frontend --- API
-	API --- MongoDB
-	API --- Redis
-	API --- OMDBAPI
-	MongoDB --- Spark
-	Spark --- Hadoop
-	Hadoop --- Slave_1
-	Hadoop --- Slave_2
-	Hadoop --- Slave_3
-	Crawler --- MongoDB
-```
+![](https://i.loli.net/2019/11/22/KWyMbadfOFInUZx.png)
 
 ## 分工
 
