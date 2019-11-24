@@ -239,10 +239,10 @@ Data: MovieLens Ml-20m 数据集
 	- Tag.csv的格式： userId,movieId,tag,timestamp
 	  - Tag是用户自己标的，可以是词，也可以是短语
 	- Links.csv的格式：movieId,imdbId,tmdbId
-  	- movieId是电影在ml-20m数据集中的ID，imdbId是电影在IMDB上的ID
+	  - movieId是电影在ml-20m数据集中的ID，imdbId是电影在IMDB上的ID
 	  - 根据这个链接，可以把ml-20m数据集中的电影映射到IMDB中的电影，进而爬取更多该电影的信息，如封面、简介等
   - Movies.csv的格式：movieId,title,genres
-  - 导入MongoDB数据库后，然后创建用Python访问各表的接口
+  - 导入MongoDB中的movies数据库，各CSV文件对应的collection名称分别为genome-socrez_temp, genome-tags_temp, links_temp, movies_temp, ratings_temp, tags_temp.我们采用在前端调用imdb api来获取电脑元信息这样一种在线式方法来在网页上展示内容，所以在links_temp表上创建了id_trans接口来将movieId转换为imdbId，提供给前端使用。另外，在进行电影推荐的时候，需要所有的评分信息，所以，在ratings_temp表上创建readMonGo接口，来将这个表中的所有评分信息读出，并转换成Spark中的dataframe格式，供推荐系统使用。
   
 
 
