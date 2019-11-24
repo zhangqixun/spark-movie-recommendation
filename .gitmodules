@@ -1,0 +1,6 @@
+[submodule "douban_movie_vue_front_end"]
+	path = douban_movie_vue_front_end
+	url = https://github.com/anonymz233/douban_movie_vue_front_end
+[submodule "flask_douban_moive_web"]
+	path = flask_douban_moive_web
+	url = https://github.com/anonymz233/flask_douban_moive_web
